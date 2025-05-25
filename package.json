@@ -21,6 +21,6 @@
     "globals": "^16.0.0"
   },
   "dependencies": {
-    "readline-sync": "github:anseki/readline-sync"
+    "readline-sync": "^1.4.10"
   }
 }
