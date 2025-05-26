@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync'
 import { randomInt } from 'crypto'
 
-const isEven = num => num % 2 === 0
+const isEven = (num) => num % 2 === 0
 
 console.log('Welcome to the Brain Games!')
 const userName = readlineSync.question('May I have your name? ')
