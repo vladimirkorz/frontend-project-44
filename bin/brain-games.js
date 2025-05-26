@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
 const greet = () => {
@@ -8,11 +7,8 @@ const greet = () => {
   return name;
 };
 
-if (import.meta.url.endsWith('brain-games.js') || 
-    process.argv[1].replace(/\\/g, '/').includes('brain-games.js')) {
+// Запуск только при прямом вызове
+if (process.argv[1].includes('brain-games.js')) {
   greet();
 }
-
-console.log('Debug:', process.argv[1]);
-
 export default greet;

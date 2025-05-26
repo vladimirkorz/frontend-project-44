@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import greet from './brain-games.js';
 
 const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 
-const play = () => {
-  const userName = greet();
+const startGame = () => {
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  
   console.log('Find the greatest common divisor of given numbers.');
 
   for (let i = 0; i < 3; i++) {
@@ -26,4 +28,4 @@ const play = () => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-play();
+startGame();
