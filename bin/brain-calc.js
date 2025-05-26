@@ -2,7 +2,6 @@
 import readlineSync from 'readline-sync'
 
 const getRandomNumber = (max) => Math.floor(Math.random() * max) + 1
-
 const getRandomOperator = () => {
   const operators = ['+', '-', '*']
   return operators[getRandomNumber(operators.length) - 1]
@@ -23,7 +22,7 @@ const calculateResult = (num1, num2, operator) => {
 
 const playGame = () => {
   console.log('Welcome to the Brain Games!')
-  const name = readlineSync.question('May I have your name?')
+  const name = readlineSync.question('May I have your name? ')
   console.log(`Hello, ${name}!`)
   console.log('What is the result of the expression?')
 
