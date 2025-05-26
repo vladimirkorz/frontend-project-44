@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import readlineSync from 'readline-sync';
 
 const greet = () => {
@@ -9,7 +8,7 @@ const greet = () => {
   return name;
 };
 
-if (process.argv[1] === import.meta.url) {
+if (process.argv[1].includes('brain-games.js')) {
   greet();
 }
 

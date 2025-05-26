@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import greet from '../bin/brain-games.js';
+import greet from './brain-games.js';
 
 const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 
