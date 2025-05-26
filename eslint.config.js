@@ -1,32 +1,15 @@
-import globals from 'globals'
-import pluginJs from '@eslint/js'
-import tseslint from 'typescript-eslint'
 import stylistic from '@stylistic/eslint-plugin'
-// import { Linter } from 'eslint'
 
 export default [
-  stylistic.configs.recommended,
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
   {
-    files: [
-      '**/*.{js,ts,tsx}',
-    ],
-  },
-  {
-    ignores: ['dist/'],
-  },
-  {
-    languageOptions: {
-      globals: globals.node,
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
+    plugins: {
+      '@stylistic': stylistic
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
-    },
-  },
-] // satisfies Linter.Config[]
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/semi': ['error', 'never'],
+      '@stylistic/eol-last': ['error', 'always'],
+      '@stylistic/no-trailing-spaces': 'error'
+    }
+  }
+]
