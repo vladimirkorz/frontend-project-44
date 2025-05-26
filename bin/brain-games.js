@@ -8,8 +8,11 @@ const greet = () => {
   return name;
 };
 
-if (process.argv[1].includes('brain-games.js')) {
+if (import.meta.url.endsWith('brain-games.js') || 
+    process.argv[1].replace(/\\/g, '/').includes('brain-games.js')) {
   greet();
 }
+
+console.log('Debug:', process.argv[1]);
 
 export default greet;
