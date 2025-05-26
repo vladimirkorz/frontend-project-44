@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync'
 
-const getRandomNumber = (max) => Math.floor(Math.random() * max) + 1
+const getRandomNumber = max => Math.floor(Math.random() * max) + 1
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*']
