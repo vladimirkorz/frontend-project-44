@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync'
+import greetUser from './greet.js'
 
 const generateProgression = (start, step, length) => {
   const progression = []
@@ -10,9 +11,7 @@ const generateProgression = (start, step, length) => {
 }
 
 const playGame = () => {
-  console.log('Welcome to the Brain Games!')
-  const name = readlineSync.question('May I have your name? ')
-  console.log(`Hello, ${name}!`)
+  const name = greetUser();
   console.log('What number is missing in the progression?')
 
   for (let i = 0; i < 3; i += 1) {
